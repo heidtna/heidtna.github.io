@@ -1,0 +1,229 @@
+/* Resume-specific styles */
+.resume-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin-top: 100px; /* Account for fixed header */
+    margin-bottom: 2rem;
+}
+
+.resume-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid #667eea;
+}
+
+.resume-header h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.resume-header .title {
+    font-size: 1.3rem;
+    color: #667eea;
+    margin-bottom: 1rem;
+}
+
+.resume-header .contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.resume-section {
+    margin-bottom: 3rem;
+}
+
+.resume-section h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+}
+
+.resume-section h2::before {
+    content: '';
+    width: 4px;
+    height: 20px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    margin-right: 1rem;
+}
+
+.experience-item, .education-item {
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    border-left: 2px solid #f0f0f0;
+    position: relative;
+}
+
+.experience-item::before, .education-item::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    background: #667eea;
+    border-radius: 50%;
+}
+
+.job-title, .degree-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.25rem;
+}
+
+.company, .school {
+    font-size: 1.1rem;
+    color: #667eea;
+    margin-bottom: 0.25rem;
+}
+
+.date-range {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.job-description, .degree-description {
+    color: #555;
+    line-height: 1.6;
+}
+
+.job-description ul, .degree-description ul {
+    padding-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.job-description li, .degree-description li {
+    margin-bottom: 0.5rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-category h3 {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 0.75rem;
+    font-weight: bold;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill-tag {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.download-section {
+    text-align: center;
+    margin: 3rem 0;
+    padding: 2rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 15px;
+    color: white;
+}
+
+.download-btn {
+    background: white;
+    color: #667eea;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+}
+
+.back-to-home {
+    position: fixed;
+    top: 50%;
+    left: 2rem;
+    transform: translateY(-50%);
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+.back-to-home:hover {
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Print Styles */
+@media print {
+    .back-to-home, .download-section {
+        display: none;
+    }
+    
+    .resume-container {
+        box-shadow: none;
+        margin-top: 0;
+    }
+    
+    body {
+        background: white;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .resume-container {
+        margin: 80px 1rem 1rem;
+        padding: 1.5rem;
+    }
+
+    .resume-header .contact-info {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .back-to-home {
+        left: 1rem;
+        width: 45px;
+        height: 45px;
+    }
+}
