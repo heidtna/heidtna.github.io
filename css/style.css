@@ -90,6 +90,38 @@ nav {
     padding: 3rem;
     border-radius: 20px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    min-height: auto;
+}
+
+.hero-image {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem
+}
+
+.hero-caption {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    object-fit: cover;
+}
+
+.hero-text {
+    text-align: center;
 }
 
 .profile-img {
@@ -114,6 +146,10 @@ nav {
     margin-bottom: 2rem;
     opacity: 0.9;
     animation: fadeInUp 1s ease 0.3s both;
+    min-height: 3.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .cta-button {
@@ -333,14 +369,28 @@ footer {
     transform: translateY(0);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+/* Responsive Design 768px */
+@media (max-width: 900px) {
     .nav-links {
         display: none;
     }
 
     .mobile-menu {
         display: flex;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .hero-image {
+        order: 2;
+    }
+
+    .hero-text {
+        order: 1;
     }
 
     .hero h1 {
