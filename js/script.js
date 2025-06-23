@@ -68,43 +68,43 @@ document.querySelectorAll('.skill-card, .project-card').forEach(card => {
 });
 
 // Dynamic typing effect for hero tagline
-// const tagline = document.querySelector('.hero .tagline');
-// const phrases = [
-//     'Automation Engineer | Test Specialist | Problem Solver',
-//     'Passionate Learner | Creative Thinker | Team Player',
-//     'Breaking New Features The Smart Way Since 2021'
-// ];
+const tagline = document.querySelector('.hero .tagline');
+const phrases = [
+    'Automation Engineer | Test Specialist | Problem Solver',
+    'Passionate Learner | Creative Thinker | Team Player',
+    'Breaking New Features The Smart Way Since 2021'
+];
 
-// let currentPhrase = 0;
-// let currentChar = 0;
-// let isDeleting = false;
+let currentPhrase = 0;
+let currentChar = 0;
+let isDeleting = false;
 
-// function typeWriter() {
-//     const current = phrases[currentPhrase];
+function typeWriter() {
+    const current = phrases[currentPhrase];
     
-//     if (isDeleting) {
-//         tagline.textContent = current.substring(0, currentChar - 1);
-//         currentChar--;
+    if (isDeleting) {
+        tagline.textContent = current.substring(0, currentChar - 1);
+        currentChar--;
         
-//         if (currentChar === 0) {
-//             isDeleting = false;
-//             currentPhrase = (currentPhrase + 1) % phrases.length;
-//             setTimeout(typeWriter, 500);
-//             return;
-//         }
-//     } else {
-//         tagline.textContent = current.substring(0, currentChar + 1);
-//         currentChar++;
+        if (currentChar === 0) {
+            isDeleting = false;
+            currentPhrase = (currentPhrase + 1) % phrases.length;
+            setTimeout(typeWriter, 500);
+            return;
+        }
+    } else {
+        tagline.textContent = current.substring(0, currentChar + 1);
+        currentChar++;
         
-//         if (currentChar === current.length) {
-//             isDeleting = true;
-//             setTimeout(typeWriter, 2000);
-//             return;
-//         }
-//     }
+        if (currentChar === current.length) {
+            isDeleting = true;
+            setTimeout(typeWriter, 2000);
+            return;
+        }
+    }
     
-//     setTimeout(typeWriter, isDeleting ? 50 : 100);
-// }
+    setTimeout(typeWriter, isDeleting ? 50 : 100);
+}
 
 // Start typing effect after page loads
 setTimeout(typeWriter, 2000);

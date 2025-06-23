@@ -145,7 +145,6 @@ nav {
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white;
     position: relative;
 }
 
@@ -202,8 +201,8 @@ nav {
 
 .hero h1 {
     font-size: 3rem;
-    margin-bottom: 1rem;
-    animation: fadeInUp 1s ease;
+    margin-bottom: 1rem; 
+    animation: fadeInUp 1s ease;   
 }
 
 .hero .tagline {
