@@ -222,7 +222,11 @@
     }
 
     .back-to-home {
-        left: 1rem;
+        top: auto;
+        bottom: 1rem;
+        left: auto;
+        right: 1.5rem;
+        transform: none;
         width: 45px;
         height: 45px;
     }
