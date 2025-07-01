@@ -142,6 +142,7 @@ nav {
 /* Hero Section */
 .hero {
     height: 50vh;
+    min-height: 500px;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -280,6 +281,7 @@ section {
 #introduction {
     padding: 0px;
     background: white;
+    margin-top: 30px;
 }
 section:nth-child(even) {
     background: #f8f9fa;
