@@ -16,7 +16,7 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 5px 20px;
 }
 
 /* Header & Navigation */
@@ -143,7 +143,9 @@ nav {
 .hero {
     height: 50vh;
     width: 100%;
-    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -236,35 +238,49 @@ nav {
     margin-bottom: 2rem;
     opacity: 0.9;
     animation: fadeInUp 1s ease 0.3s both;
-    min-height: 3.7rem;
-    display: flex;
+    min-width: 500px;
+    min-height: 35px;
+    display: block;
     align-items: center;
+    margin: 0 auto;
+    text-align: center;
     justify-content: center;
 }
 
 .cta-button {
+    display: inline-flex;
+    padding: 12px 30px;
     background: linear-gradient(45deg, #667eea, #764ba2);
     color: white;
-    padding: 12px 30px;
-    text-decoration: none;
+    min-height: 50px;
+    min-width: 250px;
+    margin: 3.5rem auto 0;
     border-radius: 30px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.2rem;
     font-weight: bold;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: inline-block;
-    animation: fadeInUp 1s ease 0.6s both;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    /* animation: fadeInUp 1s ease 0.6s both;   */
+    transition: transform 0.3s ease;
 }
 
 .cta-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+    transform: scale(1.1);
+    /* background: linear-gradient(45deg, #ff6b6b, #feca57) */
 }
 
 /* Section Styles */
 section {
-    padding: 80px 0;
+    padding: 50px 0;
     background: white;
 }
-
+#introduction {
+    padding: 0px;
+    background: white;
+}
 section:nth-child(even) {
     background: #f8f9fa;
 }
@@ -436,7 +452,7 @@ footer {
     background: #333;
     color: white;
     text-align: center;
-    padding: 2rem 0;
+    padding: 1rem;
 }
 
 /* Animations */
